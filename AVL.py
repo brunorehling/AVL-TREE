@@ -114,8 +114,8 @@ class Arvore_balanceada:
         # ATT altura
         # Primeiro chame Z pois Z está agora embaixo
         # Segundo chame Y pois Y está agora em cima
-        Z.altura = 1 + max(NoArvore.altura(Z.esquerda)),max(NoArvore.altura(Z.direita))  
-        Y.altura = 1 + max(NoArvore.altura(Y.esquerda)),max(NoArvore.altura(Y.direita))  
+        Z.altura = 1 + max(node.altura(Z.esquerda)),max(node.altura(Z.direita))  
+        Y.altura = 1 + max(node.altura(Y.esquerda)),max(node.altura(Y.direita))  
         
         return Y
 
