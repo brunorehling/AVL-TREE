@@ -69,4 +69,30 @@ class Arvore:
         return False
     
 
+    def rotacao_direita(no_desbalanceado_Z):
+    Z = no_desbalanceado_Z
+    Y = Z.esquerda
+    T3 = Y.direita
+
+    Y.direita = Z
+    Z.esquerda = T3
+
+    atualizar_altura(Z)
+    atualizar_altura(Y)
+
+    return Y
+
+def rotacao_esquerda(no_desbalanceado_Z):
+    Z = no_desbalanceado_Z
+    Y = Z.direita
+    T2 = Y.esquerda
+
+    Y.esquerda = Z
+    Z.direita = T2
+
+    atualizar_altura(Z)
+    atualizar_altura(Y)
+
+    return Y
+
 
